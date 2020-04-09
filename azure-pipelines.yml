@@ -23,5 +23,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     artifactName: drop
-    pathtoPublish: 'pipelinetest2.zip'
+    pathtoPublish: '*.zip'
     displayName: 'Publish Artifacts'
