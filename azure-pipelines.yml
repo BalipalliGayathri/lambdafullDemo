@@ -20,8 +20,14 @@ steps:
     npm install node-lambda -g
   displayName: 'npm install and build'
 
+- task: ArchiveFiles@2
+  displayName: "Archive files"
+  inputs:
+    rootFolderOrFile: "$(System.DefaultWorkingDirectory)"
+    includeRootFolder: false
+    archiveFile: "$(System.DefaultWorkingDirectory)/pipelinetest2.zip"
 - task: PublishBuildArtifacts@1
   inputs:
-    artifactName: drop
-    pathtoPublish: 'lambdaDemo.zip'
-    displayName: 'Publish Artifacts'
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/pipelinetest2.zip'
+    artifactName: 'drop'
+
