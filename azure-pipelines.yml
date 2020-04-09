@@ -23,5 +23,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     artifactName: drop
-    pathtoPublish: 'lambdafullDemo.zip'
+    pathtoPublish: 'lambdaDemo.zip'
     displayName: 'Publish Artifacts'
